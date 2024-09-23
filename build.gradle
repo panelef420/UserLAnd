@@ -7,14 +7,14 @@ buildscript {
         orientation = "unspecified"
         provider_authority = "tech.ula.provider.fileprovider"
         support_assets_version = "v1.3.4"
-        kotlin_version = '1.5.10'
-        android_plugin = '4.1.1'
+        kotlin_version = '1.9.0'
+        android_plugin = '8.5.2'
         jacoco_version = '0.8.4'
-        navigation_version = '2.1.0-alpha05'
+        navigation_version = '2.5.0'
     }
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$android_plugin"
@@ -28,7 +28,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 
